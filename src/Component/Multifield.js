@@ -17,7 +17,7 @@ function Multifield() {
       // var results = readString.parse(reader.result);
       // console.log(results[0]);
       let m = [];
-      for (let i = 0; i < 50; i++) {
+      for (let i = 0; i < results.length; i++) {
         m.push(results[i]);
       }
       // console.log(m[1][0]);
@@ -27,9 +27,11 @@ function Multifield() {
   };
 
   return (
-    <div>
+    <div className="container-fluid">
       <h1>Multi-Field</h1>
+      <br />
       <div>
+        <b>Upload the CSV File :</b>
         <ReactFileReader handleFiles={handleFiles} fileTypes={".csv"}>
           <button className="btn">Upload</button>
         </ReactFileReader>
